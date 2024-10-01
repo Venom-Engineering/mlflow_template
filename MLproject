@@ -1,0 +1,14 @@
+name: My Project
+
+python_env: python_env.yaml
+
+entry_points:
+  main:
+    parameters:
+      bootstrap: {type: bool, default: False}
+      criterion: {type: str, default: "gini"}
+      max_features: {type: float, default: 0.5}
+      min_samples_leaf: {type: int, default: 7}
+      min_samples_split: {int: int, default: 3}
+      n_estimators: {int: int, default: 100}
+    command: "python model-titanic.py {bootstrap} {criterion} {max_features} {min_samples_leaf} {min_samples_split} {n_estimators}"
